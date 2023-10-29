@@ -3,8 +3,11 @@ import random
 from dotenv import load_dotenv
 import os
 load_dotenv()
+
+
+PROXY_URL = "http://proxy.server:3128"
 ak = 'TOKEN'
-bot = Bot(token=str(os.environ.get(ak)))
+bot = Bot(token=str(os.environ.get(ak)), proxy=PROXY_URL)
 
 dp = Dispatcher(bot)
 chat_id = oken = str(os.environ.get('chat_ID'))
